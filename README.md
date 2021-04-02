@@ -5,8 +5,14 @@ Como usar o recurso de tradução para sua aplicação e como aplicar também na
 Laravel Localization
 https://laravel.com/docs/8.x/localization
 
-Pacote de traduções laravel pt-br
-https://github.com/lucascudo/laravel-pt-BR-localization
+Jquery v3.4.1
+https://jquery.com/
+
+ToastJs
+https://ireade.github.io/Toast.js/
+
+Toastr
+https://codeseven.github.io/toastr/
 
 Bootstrap 5
 https://getbootstrap.com/docs/5.0/getting-started/introduction/
