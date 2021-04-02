@@ -27,7 +27,7 @@ class CustomerRequest extends FormRequest
         return [
             'name'  =>  ['required','string'],
             'email' =>  ['present','email'],
-            'cpf'   =>  ["required","unique:customers,cpf,{$this->id}","digits:11","numeric",new RightCpf],
+            'cpf'   =>  ["required","unique:customers,cpf,{$this->id}","digits:11","numeric"],//new RightCpf],
         ];
     }
 }

@@ -28,8 +28,24 @@ class CustomerController extends Controller
 
     public function store(CustomerRequest $request)
     {
-        $this->customer->create($request->all());
-        return redirect()->route('customers.index');
+        try{
+            $this->customer->create($request->all());
+            $notification = array(
+                'title'=> trans('validation.generic.Success'),
+                'message'=> trans('validation.generic.created'),
+                'alert-type' => 'success'
+            );
+            return redirect()->route('customers.index')->with($notification);
+        }
+        catch(\Exception $e)
+        {
+            $notification = array(
+                'title'=> trans('validation.generic.Error'),
+                'message'=> trans('validation.generic.not_created').': '.$e->getMessage(),
+                'alert-type' => 'danger'
+            );
+            return back()->with($notification)->withInput();
+        }
     }
 
     public function edit($id)
@@ -41,14 +57,46 @@ class CustomerController extends Controller
     public function update(CustomerRequest $request, $id)
     {
         $customer = $this->customer->findOrFail($id);
-        $customer->update($request->all());
-        return redirect()->route('customers.index');
+        try{
+            $customer->update($request->all());
+            $notification = array(
+                'title'=> trans('validation.generic.Success'),
+                'message'=> trans('validation.generic.updated'),
+                'alert-type' => 'success'
+            );
+            return redirect()->route('customers.index')->with($notification);
+        }
+        catch(\Exception $e)
+        {
+            $notification = array(
+                'title'=> trans('validation.generic.Error'),
+                'message'=> trans('validation.generic.not_updated').': '.$e->getMessage(),
+                'alert-type' => 'danger'
+            );
+            return back()->with($notification)->withInput();
+        }
     }
 
     public function destroy($id)
     {
         $customer = $this->customer->findOrFail($id);
-        $customer->delete();
-        return back();
+        try{
+            $notification = array(
+                'title'=> trans('validation.generic.Success'),
+                'message'=> trans('validation.generic.deleted'),
+                'alert-type' => 'success'
+            );
+            $customer->delete();
+            return redirect()->route('customers.index')->with($notification);
+        }
+        catch(\Exception $e)
+        {
+            $notification = array(
+                'title'=> trans('validation.generic.Error'),
+                'message'=> trans('validation.generic.not_deleted').': '.$e->getMessage(),
+                'alert-type' => 'danger'
+            );
+            return back()->with($notification);
+        }
     }
 }

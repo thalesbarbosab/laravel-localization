@@ -139,6 +139,19 @@ return [
         ],
     ],
 
+    'generic' => [
+        'verify_data'           => 'verify the input data',
+        'Success'               => 'Success',
+        'Warning'               => 'Warning',
+        'Error'                 => 'Error',
+        'created'               => 'data entered successfully',
+        'not_created'           => 'an error occurred while trying to add. Try again.',
+        'updated'               => 'successfully changed data.',
+        'not_updated'           => 'the data could not be changed. Try again.',
+        'deleted'               => 'data removed successfully.',
+        'not_deleted'           => 'we were unable to remove this data. Try again.',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -150,6 +163,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name'      => 'nome',
+        'cpf'       => 'cpf',
+        'email'     => 'email',
+    ],
 
 ];
