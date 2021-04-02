@@ -16,3 +16,6 @@ https://codeseven.github.io/toastr/
 
 Bootstrap 5
 https://getbootstrap.com/docs/5.0/getting-started/introduction/
+
+4Devs - Gerador de cpf fake 
+https://www.4devs.com.br/gerador_de_cpf
