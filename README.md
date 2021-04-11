@@ -6,6 +6,9 @@ Vemos também boas práticas no desenvolvimento.
 Laravel Localization
 https://laravel.com/docs/8.x/localization
 
+Laravel Eloquent
+https://laravel.com/docs/8.x/eloquent#introduction
+
 Jquery v3.4.1
 https://jquery.com/
 
