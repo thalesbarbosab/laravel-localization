@@ -29,7 +29,7 @@ class CustomerController extends Controller
     public function store(CustomerRequest $request)
     {
         try{
-            $this->customer->create($request->all());
+            $this->customers->create($request->all());
             $notification = array(
                 'title'=> trans('validation.generic.Success'),
                 'message'=> trans('validation.generic.created'),
@@ -81,12 +81,12 @@ class CustomerController extends Controller
     {
         $customer = $this->customer->findOrFail($id);
         try{
+            $customer->delete();
             $notification = array(
                 'title'=> trans('validation.generic.Success'),
                 'message'=> trans('validation.generic.deleted'),
                 'alert-type' => 'success'
             );
-            $customer->delete();
             return redirect()->route('customers.index')->with($notification);
         }
         catch(\Exception $e)
