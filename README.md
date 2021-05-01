@@ -15,24 +15,13 @@ Para rodar o projeto execute os passos abaixo:
 5- rode o comando para limpar possiveil cache da aplicação "php artisan optimize:clear"
 6- rode o comando para executar as migrations no seu banco de dados "php artisan migrate:fresh"
 
+Laravel
+https://laravel.com/docs/8.x
 
-Laravel Localization
-https://laravel.com/docs/8.x/localization
+AdminLTE v3
+https://adminlte.io/themes/v3/
 
-Laravel Eloquent
-https://laravel.com/docs/8.x/eloquent#introduction
+Pacote AdminLTE v3 para Laravel
+https://github.com/jeroennoten/Laravel-AdminLTE
+DOC -> https://github.com/jeroennoten/Laravel-AdminLTE/wiki
 
-Jquery v3.4.1
-https://jquery.com/
-
-ToastJs
-https://ireade.github.io/Toast.js/
-
-Toastr
-https://codeseven.github.io/toastr/
-
-Bootstrap 5
-https://getbootstrap.com/docs/5.0/getting-started/introduction/
-
-4Devs - Gerador de cpf fake 
-https://www.4devs.com.br/gerador_de_cpf
