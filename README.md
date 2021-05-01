@@ -5,7 +5,7 @@ Vemos também boas práticas no desenvolvimento.
 Requisitos:
 **Composer versão 2.0
 **Laravel 8
-**PHP 7.3
+**PHP 8
 
 Para rodar o projeto execute os passos abaixo:
 1- clone o repositorio em um ambiente local
